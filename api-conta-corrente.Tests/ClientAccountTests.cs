@@ -5,7 +5,6 @@ using api_conta_corrente.Repository;
 
 namespace api_conta_corrente.Tests
 {
-
     public class ClientAccountServicesTests
     {
         private readonly Mock<IClientAccountRepository> _mockRepository;

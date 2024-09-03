@@ -6,10 +6,10 @@ namespace api_conta_corrente.Controller {
     
     [ApiController]
     [Route("transfer")]
-    public class TransferController(TransferService transferService, ClientAccountService clientAccountService, RabbitMQService rabbitMQService) : ControllerBase {
+    public class TransferController(ITransferService transferService, IClientAccountService clientAccountService, RabbitMQService rabbitMQService) : ControllerBase {
         
-        private readonly TransferService _transferService = transferService;
-        private readonly ClientAccountService _clientAccountService = clientAccountService;
+        private readonly ITransferService _transferService = transferService;
+        private readonly IClientAccountService _clientAccountService = clientAccountService;
         private readonly RabbitMQService _rabbitMQService = rabbitMQService;
 
         [HttpPost("debit")]

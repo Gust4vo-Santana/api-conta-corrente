@@ -21,10 +21,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<RabbitMQService>();
 builder.Services.AddControllers();
 builder.Services.AddControllers();
-builder.Services.AddScoped<ClientAccountRepository>();
-builder.Services.AddScoped<ClientAccountService>();
-builder.Services.AddScoped<TransferRepository>();
-builder.Services.AddScoped<TransferService>();
+builder.Services.AddScoped<IClientAccountRepository, ClientAccountRepository>();
+builder.Services.AddScoped<ITransferRepository, TransferRepository>();
+builder.Services.AddScoped<IClientAccountService, ClientAccountService>();
+builder.Services.AddScoped<ITransferService, TransferService>();
 
 var app = builder.Build();
 

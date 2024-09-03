@@ -5,9 +5,9 @@ namespace api_conta_corrente.Controller {
 
     [ApiController]
     [Route("account")]
-    public class ClientAccountController(ClientAccountService clientAccountService) : ControllerBase {
+    public class ClientAccountController(IClientAccountService clientAccountService) : ControllerBase {
 
-        private readonly ClientAccountService _clientAccountService = clientAccountService;
+        private readonly IClientAccountService _clientAccountService = clientAccountService;
         
 
         [HttpGet("{id}")]
