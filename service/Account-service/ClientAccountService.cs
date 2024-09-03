@@ -1,10 +1,9 @@
-using api_conta_corrente.Model;
 using api_conta_corrente.Repository;
 
 namespace api_conta_corrente.Service {
-    public class ClientAccountService(ClientAccountRepository clientAccountRepo) : IClientAccountService {
+    public class ClientAccountService(IClientAccountRepository clientAccountRepo) : IClientAccountService {
 
-        private readonly ClientAccountRepository clientAccountRepository = clientAccountRepo;
+        private readonly IClientAccountRepository clientAccountRepository = clientAccountRepo;
 
         public double GetAccountBalance(int id) {
             return clientAccountRepository.GetAccountBalance(id);
