@@ -7,7 +7,6 @@ Este é o projeto de uma API simples de gerenciamento de conta corrente. Nele é
 - [Executando a Aplicação](#executando-a-aplicação)
 - [Executando os Testes](#executando-os-testes)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Contribuindo](#contribuindo)
 
 ## Instalação
 1. Clone o repositório:
